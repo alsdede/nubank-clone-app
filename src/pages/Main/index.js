@@ -1,59 +1,58 @@
 import React from 'react';
-
+import {View, Text} from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import Header from '~/components/Header';
+import Tabs from '~/components/Tabs';
+import Menu from '~/components/Menu';
 import {
-  Text, Image, StyleSheet, Dimensions, ImageBackground, StatusBar,
-} from 'react-native';
+  Container,
+  Content,
+  Card,
+  CardHeader,
+  CardContent,
+  Title,
+  Description,
+  CardFooter,
+  Annotation,
+  AnnotationText,
+} from './styles';
 
-const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    flex: 1,
-    paddingHorizontal: 20,
-  },
-  fileName: {
-    fontWeight: 'bold',
-    marginTop: 5,
-  },
-  instructions: {
-    color: '#DDD',
-    fontSize: 14,
-    marginTop: 20,
-    textAlign: 'center',
-  },
-  logo: {
-    height: Dimensions.get('window').height * 0.11,
-    marginVertical: Dimensions.get('window').height * 0.11,
-    width: Dimensions.get('window').height * 0.11 * (1950 / 662),
-  },
-  welcome: {
-    color: '#fff',
-    fontSize: 22,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-});
+export default function Main() {
+  return (
+    <Container>
+      <Header />
 
-const Main = () => (
-  <ImageBackground
-    source={{
-      uri: 'https://s3-sa-east-1.amazonaws.com/rocketseat-cdn/background.png',
-    }}
-    style={styles.container}
-    resizeMode="cover"
-  >
-    <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
-    <Image
-      source={{
-        uri: 'https://s3-sa-east-1.amazonaws.com/rocketseat-cdn/rocketseat_logo.png',
-      }}
-      style={styles.logo}
-      resizeMode="contain"
-    />
-    <Text style={styles.welcome}>Bem-vindo ao Template Básico!</Text>
-    <Text style={styles.instructions}>Essa é a tela principal da sua aplicação =)</Text>
-    <Text style={styles.instructions}>Você pode editar a tela no arquivo:</Text>
-    <Text style={[styles.instructions, styles.fileName]}>src/pages/Main/index.js</Text>
-  </ImageBackground>
-);
+      <Content>
+        <Menu />
+        <Card>
+          <CardHeader>
+            <View
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+              }}>
+              <Icon name="attach-money" size={28} color="#999" />
+              <Text>Conta</Text>
+            </View>
+            <Icon name="visibility-off" size={28} color="#999" />
+          </CardHeader>
+          <CardContent>
+            <Title>Saldo disponível</Title>
+            <Description>R$500,00</Description>
+          </CardContent>
+          <CardFooter>
+            <Icon name="monetization-on" size={28} color="#999" />
+            <Annotation>
+              <AnnotationText>
+                Transferência de R$ 350,00 recebida de Adrisson C. Floriano 22
+                mar
+              </AnnotationText>
+            </Annotation>
+          </CardFooter>
+        </Card>
+      </Content>
 
-export default Main;
+      <Tabs />
+    </Container>
+  );
+}
