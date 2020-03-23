@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import {Animated} from 'react-native';
 import QRCode from 'react-native-qrcode-svg';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {
@@ -10,11 +10,19 @@ import {
   NavText,
   SignOutButton,
   SignOutButtonText,
+  Info,
+  InfoText,
 } from './styles';
 
-export default function Menu() {
+export default function Menu({translateY}) {
   return (
-    <Container>
+    <Container
+      style={{
+        opacity: translateY.interpolate({
+          inputRange: [0, 150],
+          outputRange: [0, 1],
+        }),
+      }}>
       <Code>
         <QRCode
           value="https://rocketseat.com.br"
@@ -23,6 +31,11 @@ export default function Menu() {
           logoBackgroundColor="#fff"
         />
       </Code>
+      <Info>
+        <InfoText>Banco 260 - Nu Pagamentos S.A</InfoText>
+        <InfoText>Agência 0001</InfoText>
+        <InfoText>Conta 9999999-9</InfoText>
+      </Info>
       <Nav>
         <NavItem>
           <Icon name="help-outline" size={20} color="#fff" />
