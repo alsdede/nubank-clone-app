@@ -31,11 +31,13 @@ export const CardHeader = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
 `;
 export const CardContent = styled.View`
   flex: 1;
-  padding: 0 30px;
+  padding: 10px 30px;
   justify-content: center;
 `;
 export const Title = styled.Text`

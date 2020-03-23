@@ -103,7 +103,7 @@ export default function Main() {
               <Icon name="monetization-on" size={28} color="#999" />
               <Annotation>
                 <AnnotationText>
-                  Transferência de R$ 2.200,00 recebida de Aline Silveira 22 mar
+                  Transferência de R$ 2.200,00 recebida de Malu Silveira 22 fev
                 </AnnotationText>
               </Annotation>
             </CardFooter>
