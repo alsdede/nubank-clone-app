@@ -17,9 +17,10 @@ NUBANK APPLICATION CLONE - MADE IN REACT NATIVE. Developed as a training project
   <p align="center">
  <img alt="APP" src="https://github.com/alsdede/nubank-clone-app/blob/master/src/assets/ss1.png" width="250px" />
   <img alt="APP" src="https://github.com/alsdede/nubank-clone-app/blob/master/src/assets/ss2.png" width="250px" />
+   <img alt="APP" src="https://github.com/alsdede/nubank-clone-app/blob/master/src/assets/nubank1.gif" width="250px" />
 </p>
-![](https://github.com/alsdede/nubank-clone-app/blob/master/src/assets/nubank.gif)
-###
+
+
 
 - [React Native](http://facebook.github.io/react-native/)
 - [React Navigation](https://reactnavigation.org/)
